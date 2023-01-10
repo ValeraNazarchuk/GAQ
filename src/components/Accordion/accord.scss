@@ -1,0 +1,42 @@
+.accord{
+  &__item{
+    max-width: px;
+  }
+
+  &__item-title{
+    font-size: px;
+    line-height: 28px;
+    // font-family: ;
+    // color: #;
+    padding: px;
+    position: relative;
+    cursor: pointer;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url();
+      background-repeat: no-repeat;
+      // background-color: #;
+      background-position: center;
+      width: px;
+      height: px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__item-text{
+    padding: px;
+    font-size: px;
+    line-height: px;
+    display: none;
+  }
+
+  &__item.accord__item--active{
+    .accord__item-text{
+      display: block;
+    }
+  }
+}

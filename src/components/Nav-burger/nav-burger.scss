@@ -1,0 +1,61 @@
+//---------NAV---------
+
+.menu__list{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  // width: ;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: translateX(100%);
+  transition: transform .4s;
+  overflow: auto;
+
+  &--active{
+    transform: translateX(0);
+  }
+}
+
+//-------BURGER--------
+
+.menu{
+&__burger{
+  cursor: pointer;
+  &::after,
+  &::before{
+  content: '';
+  display: block;
+  width: px;
+  height: px;
+  // background-color: ;
+  transition: transform .4s;
+  }
+}
+
+&__burger.menu__burger--active{
+  span{
+    display: none;
+    }
+    &::after{
+      content: '';
+      transform: rotate(-45deg);
+    }
+    &::before{
+      content: '';
+      transform: translateY(3px) rotate(45deg);
+    }
+}
+
+&__burger{
+    &-line{
+    display: block;
+    width: px;
+    height: px;
+    // background-color: #;
+    margin: px;
+    }
+  }
+}
