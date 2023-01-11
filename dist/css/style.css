@@ -116,18 +116,83 @@ body {
   color: #051655;
 }
 
-@font-face {
-  font-family: "Author";
-  font-weight: 500;
-  font-style: normal;
-  src: local("Lato"), url("../fonts/Author.woff2") format("woff2"), url("../fonts/Author.woff") format("woff"), url("../fonts/Author.eot") format("eot");
-  font-display: swap;
+.header {
+  overflow: hidden;
 }
-@font-face {
-  font-family: "Author";
+.header__inner {
+  display: flex;
+}
+.header__image {
+  height: 100vh;
+}
+.header__image-photo {
+  height: 100%;
+  width: 100%;
+}
+
+.header__content {
+  margin: 70px 0px 60px 100px;
+  display: flex;
+  flex-direction: column;
+}
+.header__content-logo {
+  max-width: 70px;
+}
+.header__content-box {
+  margin-top: 50%;
+}
+
+.header__box-title {
+  font-size: 50px;
+  line-height: 56px;
+  margin-bottom: 10px;
+}
+
+.header__box-text {
   font-weight: 400;
-  font-style: normal;
-  src: local("Lato"), url("../fonts/Author.woff2") format("woff2"), url("../fonts/Author.woff") format("woff"), url("../fonts/Author.eot") format("eot");
-  font-display: swap;
+  font-size: 20px;
+  line-height: 22px;
+  color: #747887;
+  margin-bottom: 40px;
+}
+
+.header__box-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 250px;
+  line-height: 24px;
+  color: #fff;
+  padding: 18px 30px;
+  background-color: #EB3D35;
+  transition: all 0.5s;
+}
+.header__box-btn:hover {
+  background-color: #a7251f;
+  box-shadow: -1px 0px 51px 0px rgb(167, 37, 31);
+}
+
+.header__bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+.header__bottom-text {
+  color: #747887;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.header__bottom-btn {
+  cursor: pointer;
+  font-size: 25px;
+  background-color: transparent;
+  margin-left: 5px;
+  color: #C35B48;
+  border: 0px;
+  transition: all 0.4s;
+}
+.header__bottom-btn:hover {
+  color: #a7251f;
 }
 /*# sourceMappingURL=style.css.map */

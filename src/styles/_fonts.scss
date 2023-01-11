@@ -1,20 +1,20 @@
 // Тут назву шрифта можна писати однакове а в Style просто прописувати товщину(font-weight) а тому де інший шрифт то і його назву
 
-@font-face {
-  font-family: 'Author';
-  font-weight: 500;
-  font-style: normal;
-  src: local('Lato'), url('../fonts/Author.woff2') format('woff2'),
-  url('../fonts/Author.woff') format('woff'),
-  url('../fonts/Author.eot') format('eot');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Author';
-  font-weight: 400;
-  font-style: normal;
-  src: local('Lato'), url('../fonts/Author.woff2') format('woff2'),
-  url('../fonts/Author.woff') format('woff'),
-  url('../fonts/Author.eot') format('eot');
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Author';
+//   font-weight: 500;
+//   font-style: normal;
+//   src: local('Lato'), url('../fonts/Author.woff2') format('woff2'),
+//   url('../fonts/Author.woff') format('woff'),
+//   url('../fonts/Author.eot') format('eot');
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Author';
+//   font-weight: 400;
+//   font-style: normal;
+//   src: local('Lato'), url('../fonts/Author.woff2') format('woff2'),
+//   url('../fonts/Author.woff') format('woff'),
+//   url('../fonts/Author.eot') format('eot');
+//   font-display: swap;
+// }
