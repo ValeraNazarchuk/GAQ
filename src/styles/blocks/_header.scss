@@ -52,7 +52,7 @@
   background-color: $orange-bg;
   transition: all .5s;
   &:hover{
-    background-color: #a7251f;
+    background-color: $hover-orange;
     -webkit-box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
     -moz-box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
     box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
