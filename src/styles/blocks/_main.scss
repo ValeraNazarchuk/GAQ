@@ -137,5 +137,63 @@
       opacity: 0;
     }
 }
-//-----------------------
+//-----------------PROFILE----------------
 
+.form__profile{
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.form__profile-label{
+  margin-right: 40px;
+  width: 360px;
+  height: 360px;
+  cursor: pointer;
+  border: 2px dashed #051655;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__profile-img{
+  max-width: 50px;
+  margin-bottom: 35px;
+}
+
+.form__profile-input{
+  display: none;
+}
+
+.form__contacts-inner{
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  gap: 10px;
+}
+
+.form__contacts-link{
+  display: flex;
+  max-width: 720px;
+  border: 1px solid $linegray;
+  color: $gray-size;
+  padding: 30px 25px;
+  width: 100%;
+  transition: all .5s;
+  svg{
+    margin-right: 15px;
+    path{
+      transition: all .5s;
+    }
+  }
+  &:hover{
+    color: $blue-size;
+    border: 1px solid $lineblue;
+    svg{
+      path{
+        fill: $lineblue;
+      }
+    }
+  }
+}
+//---------------
