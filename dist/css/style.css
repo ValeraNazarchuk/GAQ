@@ -212,7 +212,6 @@ body {
   line-height: 20px;
   width: 100%;
   border: 0px;
-  color: #747887;
   outline: none;
 }
 .form__search-input::-moz-placeholder {
@@ -547,7 +546,6 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px 10px 10px;
-  width: 360px;
   background-color: #F3F6F9;
   cursor: pointer;
 }
@@ -575,6 +573,7 @@ body {
   border-radius: 30px;
 }
 .radio__buttons-input::after {
+  transition: all 0.3s;
   content: "";
   position: absolute;
   width: 20px;
@@ -593,7 +592,11 @@ body {
 .radio__buttons-input:checked::before {
   border: 1px solid #EB3D35;
 }
+.radio__buttons-input:hover + .radio__buttons-border {
+  opacity: 1;
+}
 .radio__buttons-border {
+  transition: all 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -649,6 +652,7 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   z-index: 1;
+  transition: all 0.4s;
 }
 .checkboxes__buttons-input:checked::after, .checkboxes__buttons-input:checked + .checkboxes__buttons-border {
   opacity: 1;
@@ -656,7 +660,11 @@ body {
 .checkboxes__buttons-input:checked::before {
   background-color: #EB3D35;
 }
+.checkboxes__buttons-input:hover + .checkboxes__buttons-border {
+  opacity: 1;
+}
 .checkboxes__buttons-border {
+  transition: all 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -751,12 +759,19 @@ body {
 .form__body-input {
   display: none;
 }
+.form__body-input:hover + .form__body-text::before {
+  opacity: 1;
+}
 .form__body-input:checked + .form__body-text, .form__body-input:checked + .form__body-text::before {
   color: #051655;
   opacity: 1;
 }
 
+.form__body-text {
+  transition: all 0.5s;
+}
 .form__body-text::before {
+  transition: all 0.5s;
   content: "";
   position: absolute;
   top: 0;
@@ -786,8 +801,10 @@ body {
   width: 100%;
 }
 .form__data-input {
+  margin-left: 15px;
   outline: none;
   border: 0px;
+  width: 100%;
 }
 .form__data-textarea {
   border: 1px solid #E5E4E1;

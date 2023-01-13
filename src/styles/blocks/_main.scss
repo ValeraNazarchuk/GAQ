@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     padding: 10px 20px 10px 10px;
-    width: 360px;
     background-color: $gray-bg;
     cursor: pointer;
   }
@@ -37,6 +36,7 @@
       border-radius: 30px;
     }
     &::after{
+      transition: all .3s;
       content: '';
       position: absolute;
       width: 20px;
@@ -56,8 +56,12 @@
     &:checked::before{
       border: 1px solid $orange-bg;
     }
+    &:hover + .radio__buttons-border{
+      opacity: 1;
+    }
   }
   &-border{
+    transition: all .5s;
     position: absolute;
     top: 0;
     left: 0;
@@ -109,13 +113,12 @@
         position: absolute;
         width: 18px;
         height: 15px;
-        // background: black;
-        // background-image: url(./img/select/checkbox.svg);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
         z-index: 1;
+        transition: all .4s;
       }
       &:checked::after,
       &:checked + .checkboxes__buttons-border{
@@ -124,8 +127,12 @@
       &:checked::before{
         background-color: $orange-bg;
       }
+      &:hover + .checkboxes__buttons-border{
+        opacity: 1;
+      }
     }
     &-border{
+      transition: all .5s;
       position: absolute;
       top: 0;
       left: 0;
@@ -194,7 +201,7 @@
     }
   }
 }
-//---------------
+//---------------Select---------------
 
 .form__select{
   display: flex;
@@ -224,6 +231,9 @@
 
 .form__body-input{
   display: none;
+  &:hover + .form__body-text::before{
+    opacity: 1;
+  }
   &:checked + .form__body-text,
   &:checked + .form__body-text::before{
     color: $blue-size;
@@ -232,7 +242,9 @@
 }
 
 .form__body-text{
+  transition: all 0.5s;
   &::before{
+    transition: all 0.5s;
     content: '';
     position: absolute;
     top: 0;
@@ -262,10 +274,13 @@
     padding: 20px 30px;
     border: 1px solid $linegray;
     width: 100%;
+    
   }
   &-input{
+    margin-left: 15px;
     outline: none;
     border: 0px;
+    width: 100%;
   }
   &-textarea{
     border: 1px solid $linegray;
@@ -305,9 +320,7 @@
       &::before{
         content: url(../img/finish/google-logo.svg);
         position: absolute;
-        // top: 50%;
         left: 35px;
-        // transform: translate(-50%, -50%);
       }
       &:hover{
         background-color: $hover-orange;
