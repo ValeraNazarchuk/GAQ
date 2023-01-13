@@ -116,8 +116,13 @@ body {
   color: #051655;
 }
 
-.main {
-  margin: 40px 0 0 200px;
+.container {
+  margin-top: 40px;
+  max-width: 1100px;
+  padding: 0 10px;
+  margin: 40px auto;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .steps__numbers {
@@ -532,7 +537,6 @@ body {
   }
 }
 .radio__buttons {
-  max-width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 20px;
@@ -603,7 +607,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 4fr);
   gap: 20px;
-  max-width: 1120px;
   margin-bottom: 60px;
 }
 .checkboxes__buttons-label {
@@ -717,5 +720,50 @@ body {
 }
 .form__contacts-link:hover svg path {
   fill: #051655;
+}
+
+.form__select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.form__select-body + .form__select-body {
+  margin-top: 30px;
+}
+
+.form__body-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form__body-label {
+  position: relative;
+  cursor: pointer;
+  color: #747887;
+  display: block;
+  padding: 15px 25px;
+  border: 1px solid #E5E4E1;
+}
+
+.form__body-input {
+  display: none;
+}
+.form__body-input:checked + .form__body-text, .form__body-input:checked + .form__body-text::before {
+  color: #051655;
+  opacity: 1;
+}
+
+.form__body-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #051655;
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

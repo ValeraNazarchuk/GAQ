@@ -1,7 +1,6 @@
 
 
 .radio__buttons{
-  max-width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 20px;
@@ -75,7 +74,6 @@
   display: grid;
   grid-template-columns: repeat(3, 4fr);
   gap: 20px;
-  max-width: 1120px;
   margin-bottom: 60px;
   &-label{
     display: flex;
@@ -197,3 +195,51 @@
   }
 }
 //---------------
+
+.form__select{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.form__select-body + .form__select-body{
+  margin-top: 30px;
+}
+
+.form__body-items{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form__body-label{
+  position: relative;
+  cursor: pointer;
+  color: $gray-size;
+  display: block;
+  padding: 15px 25px;
+  border: 1px solid $linegray;
+}
+
+.form__body-input{
+  display: none;
+  &:checked + .form__body-text,
+  &:checked + .form__body-text::before{
+    color: $blue-size;
+    opacity: 1;
+  }
+}
+
+.form__body-text{
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #051655;
+    opacity: 0;
+  }
+}
