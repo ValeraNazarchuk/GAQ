@@ -532,7 +532,7 @@ body {
   }
 }
 .radio__buttons {
-  max-width: 1100px;
+  max-width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 20px;
@@ -542,15 +542,18 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px 10px 10px;
   width: 360px;
   background-color: #F3F6F9;
   cursor: pointer;
 }
-.radio__buttons-text {
-  margin-left: 30px;
+.radio__buttons-img {
+  margin-right: 30px;
+  padding: 10px;
+  background-color: #fff;
 }
 .radio__buttons-input {
+  display: block;
   margin-left: auto;
   position: relative;
   cursor: pointer;
@@ -578,6 +581,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  z-index: 1;
 }
 .radio__buttons-input:checked::after, .radio__buttons-input:checked + .radio__buttons-border {
   opacity: 1;
@@ -586,6 +590,70 @@ body {
   border: 1px solid #EB3D35;
 }
 .radio__buttons-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #EB3D35;
+  opacity: 0;
+}
+
+.checkboxes__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  gap: 20px;
+  max-width: 1120px;
+  margin-bottom: 60px;
+}
+.checkboxes__buttons-label {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  position: relative;
+  background-color: #F3F6F9;
+  cursor: pointer;
+}
+.checkboxes__buttons-img {
+  margin-right: 30px;
+  padding: 10px;
+  background-color: #fff;
+}
+.checkboxes__buttons-input {
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+.checkboxes__buttons-input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E5E4E1;
+  border-radius: 5px;
+}
+.checkboxes__buttons-input::after {
+  content: url(../img/select/checkbox.svg);
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+}
+.checkboxes__buttons-input:checked::after, .checkboxes__buttons-input:checked + .checkboxes__buttons-border {
+  opacity: 1;
+}
+.checkboxes__buttons-input:checked::before {
+  background-color: #EB3D35;
+}
+.checkboxes__buttons-border {
   position: absolute;
   top: 0;
   left: 0;

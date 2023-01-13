@@ -1,6 +1,7 @@
 
+
 .radio__buttons{
-  max-width: 1100px;
+  max-width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 20px;
@@ -9,18 +10,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px 10px 10px;
     width: 360px;
     background-color: $gray-bg;
     cursor: pointer;
-    // &:checked{
-    //   border: 1px solid $orange-bg;
-    // }
   }
-  &-text{
-    margin-left: 30px;
+  &-img{
+    margin-right: 30px;
+    padding: 10px;
+    background-color: #fff;
   }
   &-input{
+    display: block;
     margin-left: auto;
     position: relative;
     cursor: pointer;
@@ -47,6 +48,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+      z-index: 1;
     }
     &:checked::after,
     &:checked + .radio__buttons-border{
@@ -66,4 +68,74 @@
     opacity: 0;
   }
 }
+
+//------------------------------------
+
+.checkboxes__buttons{
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  gap: 20px;
+  max-width: 1120px;
+  margin-bottom: 60px;
+  &-label{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    position: relative;
+    background-color: $gray-bg;
+    cursor: pointer;
+  }
+  &-img{
+    margin-right: 30px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  &-input{
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #E5E4E1;
+        border-radius: 5px;
+      }
+      &::after{
+        content: url(../img/select/checkbox.svg);
+        position: absolute;
+        width: 18px;
+        height: 15px;
+        // background: black;
+        // background-image: url(./img/select/checkbox.svg);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        z-index: 1;
+      }
+      &:checked::after,
+      &:checked + .checkboxes__buttons-border{
+        opacity: 1;
+      }
+      &:checked::before{
+        background-color: $orange-bg;
+      }
+    }
+    &-border{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid $orange-bg;
+      opacity: 0;
+    }
+}
+//-----------------------
 
