@@ -766,4 +766,70 @@ body {
   border: 1px solid #051655;
   opacity: 0;
 }
+
+.form__data {
+  max-width: 930px;
+  margin-bottom: 120px;
+}
+.form__data-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.form__data-label {
+  display: flex;
+  align-items: center;
+  max-width: 460px;
+  padding: 20px 30px;
+  border: 1px solid #E5E4E1;
+  width: 100%;
+}
+.form__data-input {
+  outline: none;
+  border: 0px;
+}
+.form__data-textarea {
+  border: 1px solid #E5E4E1;
+  padding: 20px 30px;
+  outline: none;
+  width: 100%;
+  resize: none;
+}
+
+.finish {
+  margin: 40px 0px 150px;
+  max-width: 600px;
+}
+.finish__body {
+  margin-top: 120px;
+}
+.finish__body-img {
+  margin-bottom: 40px;
+}
+.finish__body-text {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #747887;
+}
+.finish__body-btn {
+  max-width: 340px;
+  margin-top: 60px;
+  padding: 18px 35px 18px 70px;
+  color: #fff;
+  background-color: #EB3D35;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+.finish__body-btn::before {
+  content: url(../img/finish/google-logo.svg);
+  position: absolute;
+  left: 35px;
+}
+.finish__body-btn:hover {
+  background-color: #a7251f;
+}
 /*# sourceMappingURL=style.css.map */
