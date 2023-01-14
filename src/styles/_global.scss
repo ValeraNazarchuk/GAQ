@@ -40,7 +40,12 @@ body {
   background: #E5E4E1;
   border-radius: 50px;
   &__seccess{
-
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $orange-bg;
+    transition: all .5s;
   }
 }
 
@@ -61,6 +66,16 @@ body {
   border-radius: 50px;
 }
 
+.active__number{
+  background: $orange-bg;
+  transition: all 1s;
+  svg{
+    path{
+      fill: #FFFFFF;
+    }
+  }
+}
+
 .form__steps-title{
   font-size: 50px;
   line-height: 56px;
@@ -72,6 +87,14 @@ body {
   font-weight: 400;
   max-width: 600px;
   margin-bottom: 40px;
+}
+
+.form__steps{
+  display: none;
+}
+
+.active{
+  display: block;
 }
 
 .button{
