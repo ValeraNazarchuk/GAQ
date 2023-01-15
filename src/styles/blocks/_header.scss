@@ -1,5 +1,6 @@
 .header{
   overflow: hidden;
+  height: 100vh;
 
   &__inner{
     display: flex;
@@ -15,7 +16,8 @@
 }
 
 .header__content{
-  margin: 70px 0px 60px 100px;
+  white-space: nowrap;
+  margin: 70px 10px 60px 100px;
   display: flex;
   flex-direction: column;
   &-logo{
@@ -100,7 +102,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 700px;
+    width: 650px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
