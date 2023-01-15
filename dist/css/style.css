@@ -120,7 +120,7 @@ body {
   margin-top: 40px;
   max-width: 1100px;
   padding: 0 10px;
-  margin: 40px auto;
+  margin: 40px auto 0px;
   height: 100%;
   overflow-x: hidden;
 }
@@ -200,6 +200,7 @@ body {
   cursor: pointer;
   font-size: 22px;
   line-height: 24px;
+  margin-bottom: 10px;
 }
 
 .step__back {
@@ -733,6 +734,10 @@ body {
   justify-content: center;
 }
 
+.form__profile-contacts {
+  width: 100%;
+}
+
 .form__profile-img {
   max-width: 50px;
   margin-bottom: 35px;
@@ -745,13 +750,12 @@ body {
 .form__contacts-inner {
   display: flex;
   flex-direction: column;
-  width: 720px;
+  max-width: 720px;
   gap: 10px;
 }
 
 .form__contacts-link {
   display: flex;
-  max-width: 720px;
   border: 1px solid #E5E4E1;
   color: #747887;
   padding: 30px 25px;
@@ -843,12 +847,16 @@ body {
   width: 100%;
 }
 .form__data-input {
+  font-size: 18px;
+  line-height: 20px;
   margin-left: 15px;
   outline: none;
   border: 0px;
   width: 100%;
 }
 .form__data-textarea {
+  font-size: 18px;
+  line-height: 20px;
   border: 1px solid #E5E4E1;
   padding: 20px 30px;
   outline: none;
@@ -893,6 +901,12 @@ body {
   background-color: #a7251f;
 }
 
+@media (min-width: 1800px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (max-width: 1250px) {
   .header__box-title {
     font-size: 40px;
@@ -953,6 +967,9 @@ body {
   .checkboxes__buttons-img {
     margin-right: 10px;
   }
+  .finish__body {
+    margin-top: 30px;
+  }
 }
 @media (max-width: 700px) {
   .modal__box {
@@ -975,8 +992,27 @@ body {
   .form__search {
     margin-bottom: 20px;
   }
+  .form__data {
+    margin-bottom: 40px;
+  }
+  .form__data-label {
+    padding: 15px 10px;
+  }
+  .form__data-textarea {
+    max-height: 150px;
+  }
+  .finish {
+    margin: 20px 0;
+  }
+  .finish__body-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 @media (max-width: 500px) {
+  .button {
+    padding: 18px 35px;
+  }
   .modal__box {
     width: 100%;
     height: 100%;
@@ -1006,10 +1042,50 @@ body {
   .radio__buttons {
     grid-template-columns: repeat(1, 1fr);
     max-width: 350px;
+    margin-bottom: 30px;
   }
   .checkboxes__buttons {
     grid-template-columns: repeat(1, 1fr);
     max-width: 350px;
+    margin-bottom: 30px;
+  }
+  .form__profile {
+    margin-bottom: 30px;
+  }
+  .form__profile-text {
+    font-size: 16px;
+  }
+  .form__profile-label {
+    height: 240px;
+    margin-right: 10px;
+  }
+  .form__contacts-link {
+    padding: 15px;
+  }
+  .form__select {
+    margin-bottom: 30px;
+  }
+  .form__body-items {
+    gap: 5px;
+  }
+  .form__body-label {
+    padding: 15px;
+  }
+  .form__body-text {
+    font-size: 18px;
+  }
+  .finish__body-img {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .finish__body-btn {
+    max-width: 300px;
+    margin-top: 30px;
+    padding: 18px 35px 18px 50px;
+  }
+  .finish__body-btn::before {
+    left: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
