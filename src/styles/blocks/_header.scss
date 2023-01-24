@@ -1,5 +1,6 @@
 .header{
   overflow: hidden;
+  height: 100vh;
 
   &__inner{
     display: flex;
@@ -9,14 +10,14 @@
     height: 100vh;
     &-photo{
       height: 100%;
-      // max-width: 50%;
       width: 100%;
     }
   }
 }
 
 .header__content{
-  margin: 70px 0px 60px 100px;
+  white-space: nowrap;
+  margin: 70px 10px 60px 100px;
   display: flex;
   flex-direction: column;
   &-logo{
@@ -52,7 +53,7 @@
   background-color: $orange-bg;
   transition: all .5s;
   &:hover{
-    background-color: #a7251f;
+    background-color: $hover-orange;
     -webkit-box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
     -moz-box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
     box-shadow: -1px 0px 51px 0px rgba(167,37,31,1);
@@ -101,22 +102,38 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 700px;
+    width: 650px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+    &-title{
+      font-size: 30px;
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+    &-closed{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      svg{
+        transition: all 0.2s;
+      }
+      &:hover{
+        svg{
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        transform: rotate(270deg);
+        fill: $hover-orange;
+        }
+      }
+    }
   }
-}
-
-.modal__box-title {
-  font-size: 30px;
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
 }
 
 .modal__form-user {
