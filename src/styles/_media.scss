@@ -111,6 +111,18 @@
   }
 }
 @media (max-width: 500px) {
+  .header{
+    &__inner{
+      justify-content: space-between;
+      height: 100%;
+    }
+    &__image{
+      height: auto;
+    }
+    &__content{
+      margin: auto;
+    }
+  }
   .button{
     padding: 18px 35px;
   }
