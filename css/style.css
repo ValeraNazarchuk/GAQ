@@ -1010,6 +1010,16 @@ body {
   }
 }
 @media (max-width: 500px) {
+  .header__inner {
+    justify-content: space-between;
+    height: 100%;
+  }
+  .header__image {
+    height: auto;
+  }
+  .header__content {
+    margin: auto;
+  }
   .button {
     padding: 18px 35px;
   }
